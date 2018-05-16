@@ -1,0 +1,24 @@
+<!--pages/translate/translate.wxml-->
+<view id='warp'>
+  <!-- 文本输入框 -->
+  <view id='fromtext'>
+    <textarea id='from-te' placeholder='请输入要翻译的内容'  bindinput="bindTextAreaBlur"></textarea>
+    <!-- 语言选择按钮 -->
+    <picker id='tolanguae' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+          {{array[index]}}
+      </view>
+    </picker>
+    <!-- 翻译按钮 -->
+    <text bindtap='translate' id='trsbtn'>翻译</text>
+    <view wx:if='{{copyhide}}' class='copy' bindtap='copy'>
+       <image src='../../img/copy.png'></image>  
+    </view>
+    
+  </view>
+  <!-- 翻译后内容显示框 -->
+  <view id='to-text'>
+    <text selectable="true"> {{dst}}</text>
+     
+     </view>
+</view>

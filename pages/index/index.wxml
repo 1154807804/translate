@@ -1,0 +1,13 @@
+
+<view id='warp'>
+  <!-- logo -->
+  <view id='logo'>
+    <image src='../../img/wzlogo.png'></image>
+  </view>
+
+  <!-- 输入框 -->
+  <view id='text' bindtap='translate'>
+    <text>请输入要翻译的内容</text>
+    <image src='../../img/search.png'></image>
+  </view>
+</view>
